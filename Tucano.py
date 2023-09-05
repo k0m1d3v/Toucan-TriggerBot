@@ -6,12 +6,16 @@ import pyautogui
 import win32api
 import win32con
 
-minBlueTargetColor = 168
-maxBlueTargetColor = 255
-minGreenTargetColor = 145
-maxGreenTargetColor = 245
-minRedTargetColor = 4
-maxRedTargetColor = 35
+BlueValue = 200  # Here goes your blue value
+GreenValue = 200  # Here goes your green value
+RedValue = 20  # Here goes your red value
+
+minBlueTargetColor = BlueValue - 32
+maxBlueTargetColor = BlueValue + 55
+minGreenTargetColor = GreenValue - 55
+maxGreenTargetColor = GreenValue + 45
+minRedTargetColor = RedValue - 16
+maxRedTargetColor = RedValue + 15
 
 
 def click():
@@ -26,7 +30,6 @@ layout = [
     [sg.T("")],
     [sg.T('                         Press "Q" to pause.')]
 ]
-
 
 window = sg.Window('Toucan V-0.1', layout, size=(350, 150))
 
